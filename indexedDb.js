@@ -27,7 +27,7 @@ function openDb() {
                         FirstName: "Default",
                         LastName: "User",
                         RoleId: 1, 
-                        IsActive: false,
+                        IsActive: true,
                         CreatedBy: "system",
                         CreatedDate: new Date(),
                         ModifiedBy: "system",
