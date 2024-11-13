@@ -31,6 +31,12 @@
     </div>
     <script src="indexedDb.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      window.resizeTo(800, 600); // Width: 800px, Height: 600px
+      window.moveTo((screen.width - 800) / 2, (screen.height - 600) / 2); // Center the window on the screen
+    }
+    </script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
 </body>
 
