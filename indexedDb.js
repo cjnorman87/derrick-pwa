@@ -13,6 +13,14 @@ function openDb() {
                 db.createObjectStore("products", { keyPath: "id", autoIncrement: true });
             }
 
+            // Create LK_WellName store if it doesn't exist
+            if (!db.objectStoreNames.contains('LK_WellName')) {
+                const wellNameStore = db.createObjectStore('LK_WellName', { keyPath: 'Id', autoIncrement: true });
+                wellNameStore.createIndex('WellName', 'WellName', { unique: true });
+                wellNameStore.createIndex('ModifiedBy', 'ModifiedBy');
+                wellNameStore.createIndex('CreatedBy', 'CreatedBy');
+            }
+
             // Create users store if it doesn't exist
             if (!db.objectStoreNames.contains("users")) {
                 const userStore = db.createObjectStore("users", { keyPath: "id", autoIncrement: true });
@@ -221,3 +229,94 @@ function deleteProduct(id) {
         });
     });
 }
+
+// Function to add a record
+function addRecord(storeName, data) {
+    return new Promise((resolve, reject) => {
+        openDb().then(db => {
+            const transaction = db.transaction([storeName], 'readwrite');
+            const store = transaction.objectStore(storeName);
+            const request = store.add(data);
+
+            request.onsuccess = event => {
+                resolve(event.target.result);
+            };
+            request.onerror = event => {
+                reject(event.target.error);
+            };
+        }).catch(reject);
+    });
+}
+
+// Function to get a record by key
+function getRecord(storeName, key) {
+    return new Promise((resolve, reject) => {
+        openDb().then(db => {
+            const transaction = db.transaction([storeName], 'readonly');
+            const store = transaction.objectStore(storeName);
+            const request = store.get(key);
+
+            request.onsuccess = event => {
+                resolve(event.target.result);
+            };
+            request.onerror = event => {
+                reject(event.target.error);
+            };
+        }).catch(reject);
+    });
+}
+
+// Function to get all records
+function getAllRecords(storeName) {
+    return new Promise((resolve, reject) => {
+        openDb().then(db => {
+            const transaction = db.transaction([storeName], 'readonly');
+            const store = transaction.objectStore(storeName);
+            const request = store.getAll();
+
+            request.onsuccess = event => {
+                resolve(event.target.result);
+            };
+            request.onerror = event => {
+                reject(event.target.error);
+            };
+        }).catch(reject);
+    });
+}
+
+// Function to update a record
+function updateRecord(storeName, data) {
+    return new Promise((resolve, reject) => {
+        openDb().then(db => {
+            const transaction = db.transaction([storeName], 'readwrite');
+            const store = transaction.objectStore(storeName);
+            const request = store.put(data);
+
+            request.onsuccess = event => {
+                resolve(event.target.result);
+            };
+            request.onerror = event => {
+                reject(event.target.error);
+            };
+        }).catch(reject);
+    });
+}
+
+// Function to delete a record
+function deleteRecord(storeName, key) {
+    return new Promise((resolve, reject) => {
+        openDb().then(db => {
+            const transaction = db.transaction([storeName], 'readwrite');
+            const store = transaction.objectStore(storeName);
+            const request = store.delete(key);
+
+            request.onsuccess = event => {
+                resolve();
+            };
+            request.onerror = event => {
+                reject(event.target.error);
+            };
+        }).catch(reject);
+    });
+}
+

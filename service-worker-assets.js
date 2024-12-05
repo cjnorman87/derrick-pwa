@@ -33,7 +33,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-+tfq7e1j2iQpx1dpbpFFYSXU695JOp8OueEaYKVsfMs=",
+      "hash": "sha256-6ovmVS9t0WrpvzDqUJjXWtBxbpHdiuoDMO7yF\/NduDk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -45,15 +45,15 @@
       "url": "_framework\/Azure.Identity.wasm"
     },
     {
-      "hash": "sha256-rlhW07oujKL\/SmEOnA5IQmKcu6qJ\/jS8WBNSZsICjCg=",
+      "hash": "sha256-imWADwWLRqF2W+GsNez8WMduzD1EdIJMSCXBTiBxLII=",
       "url": "_framework\/BLL.wasm"
     },
     {
-      "hash": "sha256-w476tHaru2suruYIl2aCXnxo2GlXVXaSco7YSnP5Fh4=",
+      "hash": "sha256-Gqlib4MSRP4LUbsZneNtpYDkxT04lCLclpYnQ9wRitM=",
       "url": "_framework\/DAL.wasm"
     },
     {
-      "hash": "sha256-ieaYbkjLsEMnrt1zAzuUidH4kvVy9A5xHRJMFjKeV6E=",
+      "hash": "sha256-w1xgahOGe6uChLBA5KVsKjg\/MG7Gg74DF303O97sVCI=",
       "url": "_framework\/Deco.wasm"
     },
     {
@@ -69,11 +69,11 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.wasm"
     },
     {
-      "hash": "sha256-0jKO+NHDjoEPh74vH15wQZAmxD02OVPezoVptPEU4MU=",
+      "hash": "sha256-IBjmcAIBluuosrbOH704ZU6VMdU+e5az8qRqWJQASwM=",
       "url": "_framework\/Microsoft.AspNetCore.Components.wasm"
     },
     {
-      "hash": "sha256-uSX4mcRU4c\/hDQUZV7IfQ+3td1\/Bwc9HByAmy93Otxw=",
+      "hash": "sha256-pVnJJeNGtMncv8sgkn07e7SgUTLUQ8hGu3nB+Dmgexw=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.wasm"
     },
     {
@@ -209,7 +209,7 @@
       "url": "_framework\/Newtonsoft.Json.wasm"
     },
     {
-      "hash": "sha256-kxP+H\/eJsis1QgI54E06rlyxpf9zY5xvC\/wGqMM8Xkg=",
+      "hash": "sha256-O3h0LR5nkYOdzxIjDahpOxE+loaPrdlJwQBtr+jdfJw=",
       "url": "_framework\/Shared.wasm"
     },
     {
@@ -417,7 +417,7 @@
       "url": "_framework\/System.Runtime.Serialization.Primitives.wasm"
     },
     {
-      "hash": "sha256-oIQjLwxariqdDzXFj2o3tktz+N4\/UFDwrXoDHMOBubk=",
+      "hash": "sha256-3tgjXDyLp6E0eFVYa1wWfsFF02sd5Ev\/n9akB2DRMaU=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -633,7 +633,7 @@
       "url": "index.html"
     },
     {
-      "hash": "sha256-55sLo42LxgGtD85o11gl29aXjCGsKUgyO+UR8BBi9Ec=",
+      "hash": "sha256-gGfAST\/zPRdDIQJTWtTnF\/tAs12bGanpVmkp5MauOvI=",
       "url": "indexedDb.js"
     },
     {
@@ -685,5 +685,5 @@
       "url": "splashScreen.gif"
     }
   ],
-  "version": "s6v+Ot3L"
+  "version": "TdEpM0Tl"
 };
